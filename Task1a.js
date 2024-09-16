@@ -1,6 +1,6 @@
 // How do I run this script?
 
-// In the terminal folder with Task1a.ts
+// In the terminal folder with Task1a.js
 // node Task1a.js   
 
 // type: string[]
@@ -23,15 +23,21 @@ const todoList = [];
  */
 function addAndPrintTodos() {
     // YOUR CODE HERE
+    todoList.push('Apply to y/cs!');
+    todoList.push('Pick out my classes');
+    todoList.push('Have dinner with my suite');
+    console.log('TODOS:');
+    for (let i = 1; i < todoList.length + 1; i ++) {
+        console.log(`${i}. ${todoList[i-1]}`);
+    }
 }
-
 /**
  * Main is considered the entry point to a procedural program. Within y/cs,
  * it's rare for us to write procedures in JS, but for learning purposes
  * we do it here
  */
 function mainTask1a() {
-    addAndPrintTodos()
+    addAndPrintTodos();
 }
 
 // This bit of code ensures that a main method exists! If it doesn't, then it throws an error

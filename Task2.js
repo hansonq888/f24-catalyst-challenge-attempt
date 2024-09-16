@@ -1,5 +1,5 @@
 // How do I run this script? 
-// node Task2.ts    
+// node Task2.js    
 
 todoList = [
     "Apply to y/cs!",
@@ -26,6 +26,7 @@ todoList = [
 function deleteTodo(index) {
     console.log("Before: " + todoList)
     // YOUR CODE HERE
+    todoList.splice(index, 1);
     console.log("After:" + todoList)
 }
 
@@ -35,7 +36,7 @@ function deleteTodo(index) {
  * we do it here
  */
 function mainTask2() {
-    deleteTodo(0);
+    deleteTodo(1);
 }
 
 // This bit of code ensures that a main method exists! If it doesn't, then it throws an error

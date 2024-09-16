@@ -55,14 +55,20 @@
         const todoList = [];
         
         // BE ABLE TO EXPLAIN what document.getByElementID() and .addEventListener() does in this context
+        // document --> Accesses HTML code
+        // .getElementById --> Accesses through Id
+        // .addEventListener --> like "if" statement, if "click"...
         document.getElementById('add-todo-btn').addEventListener('click', () => {
             
             // BE ABLE TO EXPLAIN what document.getByElementID() does in this context
+            // Retrieves the value of the input
             const todoInput = document.getElementById('todo-input');
+            // Formats the input, trims white spaces at the end
             const createdTodo = todoInput.value.trim();
             
             // Add non-empty string todos to the todo list
             // YOUR CODE HERE 
+            addTodo(createdTodo);
 
             // reset the input value after add todo is clicked.
             todoInput.value = '';
@@ -72,7 +78,9 @@
         function refreshTodoList() {
             
             // BE ABLE TO EXPLAIN what document.getByElementID() does in this context
+            //Retrieves HTML element by ID --> accessed the <ul> element with id 'todo-list'
             const todoListElement = document.getElementById('todo-list');
+            // Clears current list
             todoListElement.innerHTML = '';
 
             todoList.forEach((todo, index) => {
@@ -90,11 +98,13 @@
 
         function deleteTodo(index) {
             // YOUR CODE HERE (recycle your work from former tasks)
+            todoList.splice(index, 1);
             refreshTodoList()
         }
 
         function addTodo(todo) {
             // YOUR CODE HERE (recycle your work from former tasks)
+            todoList.push(todo);
             refreshTodoList()
         }
     </script>

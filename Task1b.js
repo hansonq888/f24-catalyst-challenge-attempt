@@ -4,7 +4,7 @@
 todoList = []; 
 /**
  * YOUR OBJECTIVE: 
- * We do a lot in the addAndPrintTodos() funciton. It's also limited in
+ * We do a lot in the addAndPrintTodos() function. It's also limited in
  * in what it can do because it takes no input.
  * Is there a way to seperate the concerns so that they could be tied to particular events
  * while also allowing us to add any todos that we want?
@@ -15,14 +15,23 @@ todoList = [];
  * 
  * In addition to updating function names, only modify the file under 
  * the "// YOUR CODE HERE" comments.
+ * 
+ *  * TODOS:
+ * 1. Apply to y/cs!
+ * 2. Pick out my classes
+ * 3. Have dinner with my suite
  */
 
-function __todo(todoString) {
+function addTodo(todoString) {
     // YOUR CODE HERE
+    todoList.push(todoString);
 }
 
-function __todo() {
+function printTodos() {
     // YOUR CODE HERE
+    for (let i = 1; i < todoList.length + 1; i ++) {
+        console.log(`${i}. ${todoList[i-1]}`);
+    }
 }
 
 /**
@@ -32,6 +41,10 @@ function __todo() {
  */
 function mainTask1b() {
     // YOUR CODE HERE (simply call the functions you implemented above)
+    addTodo('Apply to y/cs!');
+    addTodo('Pick out my classes');
+    addTodo('Have dinner with my suite');
+    printTodos();
 }
 
 // This bit of code ensures that a main method exists! If it doesn't, then it throws an error
